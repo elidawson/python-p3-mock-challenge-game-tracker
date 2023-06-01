@@ -22,11 +22,11 @@ class TestPlayer:
         player = Player("Saaammmm")
         assert (hasattr(player, "username"))
 
-        # with pytest.raises(Exception):
-        #     Player("y")
+        with pytest.raises(Exception):
+            Player("y")
 
-        # with pytest.raises(Exception):
-        #     Player("this_username_is_too_long")
+        with pytest.raises(Exception):
+            Player("this_username_is_too_long")
 
     def test_username_setter(self):
         '''Can change the player's username'''
